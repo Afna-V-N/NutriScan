@@ -1,0 +1,149 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: url('../Assets/healthy-unhealthy-food-background-fruits-600nw-1761913922.webp') no-repeat center center;
+  background-size: cover;
+}
+
+
+.wrapper {
+    position: relative;
+    width: 420px;
+    height: 410px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #070707;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.2s ease;
+}
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+    position: absolute;
+    transition: transform 0.4s ease;
+    
+}
+
+.wrapper .form-box.login {
+    transform: translateX(0);
+    z-index: 2;
+    
+}
+
+.wrapper.active .form-box.login {
+    transform: translateX(-100%);
+}
+
+.wrapper .form-box.register {
+    transform: translateX(100%);
+    z-index: 1;
+}
+
+.wrapper.active .form-box.register {
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.remember-forgot {
+  font-family: 'Arial', sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.remember-forgot a {
+  font-size: 11px;
+  color: rgb(83, 7, 65);
+  
+}
+
+button {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.register-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+/* Make inputs oval */
+.input-box input {
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  text-align: left;
+}
+
+/* Position the icon inside the input-box (optional) */
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 50px;
+  color: #888;
+}
+
+/* Oval button */
+button[type="submit"] {
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Bottom center NutriScan */
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+}
+
+
